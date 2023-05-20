@@ -1,6 +1,6 @@
 export const json = {
     title: "PBL 5",
-    description: "Muhammad Daffa Rudiyanto (Student ID: 26002104783) Ver. 2",
+    description: "Muhammad Daffa Rudiyanto (Student ID: 26002104783) Ver. 3",
     logoPosition: "right",
     pages: [
         {
