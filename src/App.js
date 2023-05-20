@@ -36,7 +36,7 @@ function SurveyComponent() {
     options.showSaveInProgress();
     
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://pbl5-mdr-default-rtdb.firebaseio.com/");
+    xhr.open("POST", "https://pbl5-mdr-default-rtdb.firebaseio.com");
     xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8");
     xhr.onload = function () {
       if (xhr.status === 200) {
