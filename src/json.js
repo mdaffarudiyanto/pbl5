@@ -1,6 +1,6 @@
 export const json = {
     title: "PBL 5",
-    description: "Muhammad Daffa Rudiyanto (Student ID: 26002104783)",
+    description: "Muhammad Daffa Rudiyanto (Student ID: 26002104783) Ver. 2",
     logoPosition: "right",
     pages: [
         {
@@ -75,11 +75,11 @@ export const json = {
         {
             name: "sound1",
             elements: [
-                {
-                    type: "html",
-                    name: "song1",
-                    html: "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/0XQHpt64EzE\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
-                },
+                // {
+                //     type: "html",
+                //     name: "song1",
+                //     html: "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/0XQHpt64EzE\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
+                // },
 
                 {
                     type: "radiogroup",
