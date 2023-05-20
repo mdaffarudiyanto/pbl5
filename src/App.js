@@ -32,30 +32,33 @@ const analytics = getAnalytics(app);
 
 function SurveyComponent() {
   const survey = new Model(json);
-  
+
   survey.onComplete.add(function (sender, options) {
     // Display the "Saving..." message (pass a string value to display a custom message)
     options.showSaveInProgress();
-    
-    const xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://pbl5-mdr-default-rtdb.firebaseio.com");
-    xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8");
-    xhr.onload = function () {
-      if (xhr.status === 200) {
-        // Display the "Success" message (pass a string value to display a custom message)
-        options.showSaveSuccess();
-        // Alternatively, you can clear all messages:
-        // options.clearSaveMessages();
-      } else {
+
+    fetch("https://pbl5-mdr-default-rtdb.firebaseio.com/surveyResponses.json", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(sender.data)
+    })
+      .then(response => {
+        if (response.ok) {
+          // Display the "Success" message (pass a string value to display a custom message)
+          options.showSaveSuccess();
+          // Alternatively, you can clear all messages:
+          // options.clearSaveMessages();
+        } else {
+          // Display the "Error" message (pass a string value to display a custom message)
+          options.showSaveError();
+        }
+      })
+      .catch(() => {
         // Display the "Error" message (pass a string value to display a custom message)
         options.showSaveError();
-      }
-    };
-    xhr.onerror = function () {
-      // Display the "Error" message (pass a string value to display a custom message)
-      options.showSaveError();
-    };
-    xhr.send(JSON.stringify(sender.data));
+      });
   });
 
   return <Survey model={survey} />;

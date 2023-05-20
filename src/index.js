@@ -11,17 +11,6 @@ import reportWebVitals from './reportWebVitals';
 //     optionSuccessStatus:200
 // }
 
-const items = [];
-exports.getItems = functions.region('us-central1').https.onRequest((request, response) => {
-    // CORS用にAccess-Control-Allow系ヘッダを追加
-    response.set('Access-Control-Allow-Origin', 'https://mdaffarudiyanto.github.io/'); // localhostを許可
-    response.set('Access-Control-Allow-Methods', 'GET, HEAD, OPTIONS, POST'); // DELETEだけは拒否
-    response.set('Access-Control-Allow-Headers', 'Content-Type'); // Content-Typeのみを許可
-
-    response.json({ items });
-});
-
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
