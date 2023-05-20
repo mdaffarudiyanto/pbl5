@@ -4,12 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-// const cors = require('cors');
-// const corsOptions ={
-//     origin:'http://localhost:3001', 
-//     credentials:true,            //access-control-allow-credentials:true
-//     optionSuccessStatus:200
-// }
+const cors = require('cors');
+const corsOptions ={
+    origin:'true', 
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200
+}
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
