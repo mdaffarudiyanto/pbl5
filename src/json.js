@@ -73,7 +73,7 @@ export const json = {
      {
       "type": "radiogroup",
       "name": "sound1-Do you hear the sound?",
-      "title": "Do you hear the sound?",
+      "title": "Did you hear the sound of the electric vehicle?",
       "isRequired": true,
       "choices": [
        {
@@ -236,7 +236,7 @@ export const json = {
      {
       "type": "radiogroup",
       "name": "question2",
-      "title": "Do you hear the sound?",
+      "title": "Did you hear the sound of the electric vehicle?",
       "isRequired": true,
       "choices": [
        {
@@ -399,7 +399,7 @@ export const json = {
      {
       "type": "radiogroup",
       "name": "question14",
-      "title": "Do you hear the sound?",
+      "title": "Did you hear the sound of the electric vehicle?",
       "isRequired": true,
       "choices": [
        {
